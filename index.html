@@ -1,0 +1,158 @@
+<html>
+<head>
+    <title>PAEC</title>
+    <style>
+        .navbar { 
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background-color: hsl(0, 0%, 100%);
+            width: 100%;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 1000;
+        }
+        body {
+            font-family: Bahnschrift SemiBold;
+            margin: 0;
+            padding-top: 60px;
+            background: linear-gradient(to bottom left, #1d1d1d, #000000);
+            color: rgb(255, 255, 255);
+            transition: background-image 0.5s ease-in-out;
+            background-size: cover;
+        }
+        header {
+            text-align: center;
+            padding: 100px;
+            animation: backgroundChange 10s infinite;
+            background-size: cover;
+            background-position: center;
+        }
+        nav {
+            text-align: center;
+        }
+        nav img {
+            width: 200px;
+            margin: 10px;
+            border-radius: 100px;
+            transition: transform 0.3s, filter 0.3s;
+            border: 2px solid whitesmoke;
+            transition: transform 0.3s;
+            filter: blur(1px);
+        }
+        nav img:hover {
+            transform: scale(2.0);
+            filter: blur(0px);
+        }
+        nav img:hover::after {
+            opacity: 1;
+        }
+        .bienvenido {
+            font-size: 50px;
+            margin-bottom: 20px;
+            font-weight: bold;
+            color: #ffffff;
+        }
+        .animal-img {
+            display: inline-block;
+            margin: 20px;
+            cursor: pointer;
+            transition: transform 0.5s ease;
+            position: relative;
+        }
+        .animal-img:hover {
+            transform: scale(1.05);
+        }
+        .animal-img img {
+            transition: filter 0.3s ease, transform 0.3s ease;
+        }
+        .animal-img .overlay-img {
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            opacity: 0;
+            transition: opacity 0.3s ease;
+        }        
+        .animal-img:hover .main-img {
+            transform: scale(1.1);
+        }
+        .animal-img:hover .overlay-img {
+            opacity: 1;
+            transform: scale(1.1);
+        }
+        footer {
+            background-color: rgb(34, 34, 34);
+            color: white;
+            text-align: center;
+            padding: 20px;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="navbar">            
+            <a href="K:\PAEC PROYECTO\PAEC CECYTEA.html"><img src="paec logo.png" width="80" height="50" align="left"></a>
+        </div>
+        <div class="bienvenido">Bienvenido a     <img src="paec1.png" width="110" height="70" align="center"></div>
+    </header>
+
+    <nav>
+        <font size=4>Descubre los proyectos de CECyTEA</font><br><br>
+        <div class="animal-img"
+            onmouseover="cambiarFondo('https://opticayoftalmologia.com/wp-content/uploads/2024/07/288-FOTO-Requisitos-para-optica-oftalmica.jpg')" 
+            onmouseout="regresarFondo()">
+            <a href="K:\PAEC PROYECTO\Lentes Para Todos\lentesparatodosinfo.html">
+                <img src="lentesillospro.jpg" class="main-img" data-static="lentesillospro">
+                <img src="LNTS.png" class="overlay-img">
+            </a>
+        </div>
+
+        <div class="animal-img"
+            onmouseover="cambiarFondo('https://www.hespanol.com/fotografias/banners/asilo_hospitalesp.jpg') " 
+            onmouseout="regresarFondo()">
+            <a href="asiloproyectoinfo.html">
+                <img src="asilop.jpg" class="main-img" data-static="asilop">
+                <img src="asiloicon.png" class="overlay-img">
+            </a>
+        </div>
+
+        <div class="animal-img"
+            onmouseover="cambiarFondo('https://utopiaurbana.city/wp-content/uploads/2022/07/tapitas.jpg')" 
+            onmouseout="regresarFondo()">
+            <a href="tapitasinfo.html">
+                <img src="tapitasaka.png" class="main-img" data-static="tapitasaka">
+                <img src="tapitosicon.png" class="overlay-img">
+            </a>
+        </div>
+
+        <div class="animal-img"
+            onmouseover="cambiarFondo('https://img.travesiasdigital.com/2018/11/ajolotes_06.jpg')" 
+            onmouseout="regresarFondo()">
+            <a href="zoologicoinfo.html">
+                <img src="zoocitesito.png" class="main-img" data-static="zoocitesito">
+                <img src="zooincon.png" class="overlay-img">
+            </a>
+        </div>
+    </nav>
+
+    <footer>
+        <p>Victor De La Torre Bermejo</p>
+        <p>Laura Yazmin Morales Muñoz</p> 
+        <p>Grado / Grupo: 5°A</p>
+        <img src="cepystea logo.png" style="max-width: 100px;">
+    </footer>
+
+    <script>
+        function cambiarFondo(imagenFondo) {
+            document.body.style.backgroundImage = `url(${imagenFondo})`;
+        }
+        function regresarFondo() {
+            document.body.style.backgroundImage = 'linear-gradient(to bottom left,  #1d1d1d, #000000)';
+        }
+    </script>
+    
+</body>
+</html>
